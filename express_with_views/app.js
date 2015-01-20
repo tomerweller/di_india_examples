@@ -2,10 +2,11 @@
  * Created by tomerweller on 1/12/15.
  */
 
+var path = require('path');
 var express = require('express');
 var app = express();
 
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get("/", function (req, res) {
